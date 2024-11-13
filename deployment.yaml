@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: bacdocker/nodejsexam2:v1
+        image: shailadocker123/nodeapp:v1
         ports:
         - containerPort: 3000  # Replace with the port your app is running on
         env:
