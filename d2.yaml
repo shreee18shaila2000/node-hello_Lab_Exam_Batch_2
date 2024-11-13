@@ -15,5 +15,6 @@ spec:
       containers:
       - name: nodejs-container
         image: shailadocker123/nodeapp111:v1
-        - containerPort: 3002
+        ports:
+         - containerPort: 3002
 
