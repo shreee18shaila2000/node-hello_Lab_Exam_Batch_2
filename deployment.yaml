@@ -1,11 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejsdeployment
-  labels:
-    app: nodejs
+  name: nodejs-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nodejs
@@ -15,17 +13,7 @@ spec:
         app: nodejs
     spec:
       containers:
-      - name: nodejs-app
+      - name: nodejs-container
         image: shailadocker123/nodeapp:v1
         ports:
-        - containerPort: 3000  # Replace with the port your app is running on
-        env:
-        - name: NODE_ENV
-          value: "production"
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "500m"
-          limits:
-            memory: "512Mi"
-            cpu: "1"
+        - containerPort: 3000
