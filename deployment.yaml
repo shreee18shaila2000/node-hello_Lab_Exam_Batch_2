@@ -18,4 +18,4 @@ spec:
       - name: napp
         image: shailadocker123/nodeapp:v1
         ports:
-        - containerPort: 3000
+        - containerPort: 3002
