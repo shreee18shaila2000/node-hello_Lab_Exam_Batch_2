@@ -4,9 +4,9 @@ metadata:
   name: nodejs-service
 spec:
   selector:
-    app: nodejs
+    app: napp
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000 # The port your Node.js app listens to
+      targetPort: 3000 
   type: NodePort
