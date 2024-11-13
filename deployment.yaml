@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-deployment
+  name: napp
+  labels:
+    app: napp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs
+      app: napp
   template:
     metadata:
       labels:
-        app: nodejs
+        app: napp
     spec:
       containers:
-      - name: nodejs-container
+      - name: napp
         image: shailadocker123/nodeapp:v1
         ports:
         - containerPort: 3000
